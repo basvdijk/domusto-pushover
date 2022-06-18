@@ -1,7 +1,7 @@
-# Pushbullet
+# Pushover
 
 ```
-plugin:    Allows DOMUSTO to send Pushbullet push messages to your devices
+plugin:    Allows DOMUSTO to send Pushover push messages to your devices
 author:    Bas van Dijk
 category:  system
 version:   0.0.1
@@ -12,20 +12,20 @@ website:   http://domusto.com
 - none
 
 ## Software needed
-- Pushbullet.com account
+- [https://pushover.net](pushover.net) account
 
 ## Tested with
  - RFXcom events
 
 ## Installation
 ```sh
-$ ./domusto.js plugin install basvdijk/domusto-pushbullet
+$ ./domusto.js plugin add basvdijk/domusto-pushover
 ```
 
-## Get Pushbullet access token
-The Pushbullet plugin need acces to the Pushbullet API. To grand DOMUSTO access you'll need an access token so the Pushbullet server knows who you are. You can get one from the [Pushbullet Account Settings](https://www.pushbullet.com/#settings/account) page.
+## Get Pushover access token
+The Pushover plugin need acces to the Pushover API. To grand DOMUSTO access you'll need an access token so the Pushover server knows who you are. You can get one from the [Pushover website](https://pushover.net)) page.
 
-The DOMUSTO Pushbullet plugin supports to broadcast to mutiple Pushbullet users. An use case could be a doorbell where multiple Pushbullet users need to be notified when pressed.
+The DOMUSTO Pushover plugin supports to broadcast to mutiple Pushover users. An use case could be a doorbell where multiple Pushover users need to be notified when pressed.
  
 ## Configuration
 
@@ -34,15 +34,12 @@ The DOMUSTO Pushbullet plugin supports to broadcast to mutiple Pushbullet users.
 
 ```js
 {
-    id: 'PUSHBULLET',
+    id: 'PUSHOVER',
     enabled: true,
     settings: {
-        accessTokens: [
-            '<ACCESS TOKEN 1>',
-            '<ACCESS TOKEN 2>'
-        ],
+        apiToken: '<ACCESS TOKEN>',
+        userKey: '<USER KEY>',
     },
-
 }
 ```
 
@@ -72,7 +69,7 @@ The DOMUSTO Pushbullet plugin supports to broadcast to mutiple Pushbullet users.
         },
         {
             listenToEvents: ['trigger'],
-            pluginId: 'PUSHBULLET',
+            pluginId: 'PUSHOVER',
             deviceId: 'note',
             data: {
                 title: 'Doorbell',
