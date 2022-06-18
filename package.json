@@ -1,0 +1,26 @@
+{
+  "name": "domusto-pushbullet",
+  "version": "1.0.0",
+  "description": "Pushbullet plugin for DOMUSTO Home Automation",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basvdijk/domusto-pushbullet.git"
+  },
+  "keywords": [
+    "domusto"
+  ],
+  "author": "Bas van Dijk",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/basvdijk/domusto-pushbullet/issues"
+  },
+  "homepage": "https://github.com/basvdijk/domusto-pushbullet#readme"
+}
